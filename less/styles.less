@@ -1,0 +1,60 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 10px;
+}
+
+.experiment, .experiment__viewport {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+#js-parallax {
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.parallax_item,
+.static_item {
+	top: 0;
+	left: 0;
+}
+
+.static_item {
+	position: absolute;
+}
+.parallax_item {
+	position: relative;
+
+	.mask {
+		clip-path: polygon(0 100%, 0 0, 40% 0, 60% 100%);
+		-webkit-clip-path: polygon(0 100%, 0 0, 40% 0, 60% 100%);
+	 	position: absolute;
+	 	z-index: 1000;
+	 	height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+	.pos {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top:0;
+		left: 0;
+	}
+}
+
+.center_img {
+	width: 100%;
+	height: 100%;
+}
